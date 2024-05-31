@@ -1,1 +1,54 @@
 /* Ini Css */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+
+nav.section {
+        display: flex;
+        align-items: center;
+}
+
+.logo-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(https://picsum.photos/200);
+}
+
+.nav-item {
+    border: 1px solid black;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.section-container {
+    background-color: aquamarine;
+
+}
+
+.banner-container {
+    height: 258px;
+    border: 1px solid black;
+}
+
+.facility-list {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 50%;
+}
+
+.form-result {
+    height: 100px;
+    border: 1px solid black;
+}
+
+.message-us-section {
+    display: flex;
+}
+
+.result-container {
+    width: 100%;
+}
