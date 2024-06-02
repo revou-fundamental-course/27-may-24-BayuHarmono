@@ -64,14 +64,15 @@ li a:hover::after{
 .form-result {
     height: 200px;
     width: 500px;
-    align-items: right;
+    border-radius: 10px;
     border: 1px solid black;
 }
 
 .message-us-section {
     display: flex;
+    justify-content: space-around;
 }
 
-.result-container {
-    width: 100%;
+body {
+    background-color: yellow;
 }
