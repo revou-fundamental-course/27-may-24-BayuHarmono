@@ -1,32 +1,53 @@
 /* Ini Css */
 
-nav {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    height: 100px;
     display: flex;
-    justify-content: space-between;
-    background-color: aliceblue;
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav.section {
-        display: flex;
-        align-items: center;
+ul{
+    display: flex;
+    list-style-type: none;
 }
 
-.logo-icon {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-image: url(https://picsum.photos/200);
-}
+ul li a{
+    padding:0 20px;
+    display: ;
 
-.nav-item {
-    border: 1px solid black;
-    padding-left: 8px;
-    padding-right: 8px;
+
 }
 
 .section-container {
-    background-color: aquamarine;
+    background-color: white;
+    text-decoration: none;
+}
 
+li a::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: blueviolet;
+    transition: all .5s;
+
+
+}
+
+li a:hover::after{
+    width:100%;
 }
 
 .banner-container {
@@ -41,7 +62,9 @@ nav.section {
 }
 
 .form-result {
-    height: 100px;
+    height: 200px;
+    width: 500px;
+    align-items: right;
     border: 1px solid black;
 }
 

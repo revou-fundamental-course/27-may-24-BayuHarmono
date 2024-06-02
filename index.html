@@ -5,56 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bayu Harmono Putra Portofolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        <body {
+            margin: 0;
+        }
+
+    </style>
 </head>
 <body>
     <nav>
-        <div class="logo-icon"></div>
+        <div class="logo">
+            <img src="12.png" alt="logo" width="50px">
+        </div>
 
-        <section>
-            <a class=""nav-item href="#home">Home</a>
-            <a class=""nav-item href="#facilities">Our Facilities</a>
-            <a class=""nav-item href="#messageus">Message Us</a>
-        </section>
-    </nav>
+        
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Profiles</a></li>
+                <li><a href="#">Our Facilitation</a></li>
+                <li><a href="#">Message Us</a></li>
+            </ul>
+        </nav>
 
-    <hr>
+    <hr color="blueviolet">
 
     <section class="section-container">
         <!-- Home -->
         <section id="home">
-                <header>
-                    <h1>Hi Bayu, Welcome To Website</h1>
-                </header>
-                <article>
-                    <p>Ini Adalah Website Pertama Saya</p>
-                    <div class="banner-container"></div>
-                </article>
+                <section id="home">
+                    <div class="content-left">
+                    <h1>AIRLANGGA</h1>
+                    <h1>DIGITAL</h1>
+                    <p>Selamat Datang di Toko Kami Pelayanan Pelanggan : Senin - Minggu 09.00 - 21.00 Produk yang reject, kurang atau dll dapat ditukar / ganti baru dengan konfirmasi komplain melalui chat Shopee Happy Shopping </p>
+                    <button class="cta">Learn More</button>
+                    </div>
+                    <div class="cont-right">
+                        <img src="b.webp" alt="" class="hero-img" width="1900" height="700">
+                    </div>
+                </section>
         </section>
 
-        <hr>
+        <hr color="blueviolet">
 
-        <!-- Our Facilities -->
-        <section id="facilities">
+        <!-- Our Profil -->
+        <section id="Facilitation">
                 <header>
-                    <h1>Our facilities</h1>
+                    <h1>Our Facilitation</h1>
                 </header>
                 <article class="facility-list">
                 <div> 
-                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black; border-radius: 500%;"></div>
                     <h5>Free refil</h5>
                 </div>
                 <div> 
-                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black; border-radius: 500%;"></div>
                     <h5>Free refil</h5>
                 </div>
                 <div> 
-                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black; border-radius: 500%;"></div>
                     <h5>Free refil</h5>
                     </div>
                 </article>
         </section>
 
-        <hr>
+        <hr color="blueviolet">
 
         <!-- Message Us -->
         <section id="message us">
@@ -64,10 +78,56 @@
             <section class="message-us-section">
                     <!-- Form -->
                     <section>
-                        <form>
-                            <label>Name</label>
-                            <input />
-                        </form>
+                        <table>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td><input type="name" name="nama" placeholder="Nama" required/><br /></td>
+                        </tr>       
+                    
+                        <tr>
+                            <td>Tempat/Tanggal Lahir</td>
+                            <td>:</td>
+                            <td><input type="name" name="tempatLahir" placeholder="Tempat Kelahiran"/> <input type="date" name="tanggal" /></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Agama</td>
+                            <td>:</td>
+                            <td><select name="agama">
+                                <option value="islam"> Islam</option>
+                                <option value="kristen"> Kristen</option>
+                                <option value="katolik"> Katolik</option>
+                                <option value="budha"> Budha</option>
+                                <option value="hindu"> Hindu</option>
+                            </select></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Alamat</td>
+                            <td>:</td>
+                            <td><textarea name="komentar" rows="4" cols="50" placeholder="Alamat"></textarea> </td>
+                        </tr>
+                    
+                        <tr>
+                            <td>No Telp/Hp</td>
+                            <td>:</td>
+                            <td><input type="number" name="number" placeholder="Nomor Telepon"/></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td><input type="radio" name="jenisKelamin" /> Pria
+                                <input type="radio" name="jenisKelamin" /> Wanita</td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" name="submit" value="SUBMIT"/></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    
+                    </table>
                     </section>
 
                     <!-- Result -->
@@ -82,7 +142,8 @@
     </section>
 
     <footer>
-
+        <hr color="blueviolet">
+<h6 align="right">Created By Bayu Harmono Putra</h6>
 
     </footer>
 </body>
