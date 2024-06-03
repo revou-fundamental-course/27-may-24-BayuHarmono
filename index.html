@@ -11,6 +11,8 @@
         }
 
     </style>
+    <script>
+    </script>
 </head>
 <body >
     <section style="background-image: url('ww.jpg');" >
@@ -19,10 +21,10 @@
             <img src="12.png" alt="logo" width="90px">
         </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our Profiles</a></li>
-                <li><a href="#">Our Facilitation</a></li>
-                <li><a href="#">Message Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#home">Our Profiles</a></li>
+                <li><a href="#facilitation">Our Facilitation</a></li>
+                <li><a href="#message-us">Message Us</a></li>
             </ul>
         </nav>
     </section>
@@ -34,7 +36,7 @@
         <section id="home">
                 <section id="home">
                     <div class="content-left">
-                    <h1 align="center">AIRLANGGA DIGITAL</h1>
+                    <h1 align="center"> <span id="name">AIRLANGGA DIGITAL</span></h1>
                     <p align="center">Selamat Datang di Toko Kami Pelayanan Pelanggan : Senin - Minggu 09.00 - 21.00 Produk yang reject, kurang atau dll dapat ditukar / ganti baru dengan konfirmasi komplain melalui chat Shopee Happy Shopping </p>
                     </div>
                     <div class="cont-right">
@@ -46,7 +48,7 @@
         <hr color="blueviolet">
 
         <!-- Our Profil -->
-        <section id="Facilitation" align="center">
+        <section id="facilitation" align="center">
                 <header>
                     <marquee><h1 align="center">KAMI MENYEDIAKAN BERBAGAI PELAYANAN DI ANTARANYA YAITU : ~ SERVIS,PERBAIKAN DAN PERAWATAN ~ PENJUALAN & PEMBELIAN ~ MENYEDIAKAN SPAREPART DAN KOMPONEN ~       BISA HUB : 0823-3186-4615</h1></marquee>
                 </header>
@@ -69,31 +71,31 @@
         <hr color="blueviolet">
 
         <!-- Message Us -->
-        <section id="message us">
+        <section id="message-us">
             <header>
                 <h1 align="center">Hubungi Kami Disini</h1>
             </header>
             <section class="message-us-section">
                     <!-- Form -->
                     <section class="section-form">
-                        <form>
+                        <form name="datapribadi" method="" action="">
                         <table>
                         <tr>
                             <td>Nama</td>
                             <td>:</td>
-                            <td><input type="name" name="nama" placeholder="Nama" required/><br /></td>
+                            <td><input type="text" placeholder="Nama" id="full-name"  required /> <br /></td>
                         </tr>       
                     
                         <tr>
-                            <td>Tempat/Tanggal Lahir</td>
+                            <td>Tempat/Tanggal Penjemputan</td>
                             <td>:</td>
-                            <td><input type="name" name="tempatLahir" placeholder="Tempat Kelahiran"/> <input type="date" name="tanggal" /></td>
+                            <td><input type="text" name="tempatLahir" placeholder="Tempat" id="birt-date"> <input type="date" name="tanggal" id="tanggal" /></td>
                         </tr>
                     
                         <tr>
                             <td>Kebutuhan</td>
                             <td>:</td>
-                            <td><select name="kebutuhan">
+                            <td><select name="kebutuhan" id="kebutuhan">
                                 <option value="Servis"> Servis </option>
                                 <option value="Beli Barang"> Beli Barang </option>
                                 <option value="Jual Barang"> Jual Barang </option>
@@ -103,25 +105,28 @@
                         </tr>
                     
                         <tr>
-                            <td>Alamat</td>
+                            <td>Apa Yang Anda Butuhkan</td>
                             <td>:</td>
-                            <td><textarea name="komentar" rows="4" cols="50" placeholder="Alamat"></textarea> </td>
+                            <td><textarea name="komentar" rows="4" cols="50" placeholder="Tulis Disini Kebutuhan Anda" id="Keterangan"></textarea> </td>
                         </tr>
                     
                         <tr>
                             <td>No Telp/Hp</td>
                             <td>:</td>
-                            <td><input type="number" name="number" placeholder="Nomor Telepon"/></td>
+                            <td><input type="number" id="nomor" name="number" placeholder="Nomor Telepon"/></td>
                         </tr>
                     
                         <tr>
                             <td>Jenis Kelamin</td>
                             <td>:</td>
-                            <td><input type="radio" name="jenisKelamin" /> Pria
-                                <input type="radio" name="jenisKelamin" /> Wanita</td>
+                            <td> 
+                                <input type="radio" name="jeniskelamin" value="Pria">Pria
+                                <input type="radio" name="jeniskelamin" value="Wanita">Wanita
+                                
+                            </td>
                         </tr>                             
                     </table>
-                    <input class="submit" type="submit" name="submit" value="SUBMIT" style="height: 40px; width: 550px;">
+                    <button type="button" onclick="cetak()"  value="KIRIM" style="height: 40px; width: 580px;"> Kirim </button>
                 </form>
                     
                         
@@ -129,8 +134,20 @@
 
                     <!-- Result -->
                     <section class="result-container">
+                    
                         <div class="form-result">
 
+                            <p><h1>KAMI AKAN SEGERA MERESPON KEBUTUHAN ANDA</h1>  </p>
+                            <P></P>
+                            <P></P>
+
+                            <p>Nama: <span id="hasil-nama"></span></p>
+                            <p>Lokasi Penjemputan: <span id="hasil-ttl"></span></p>
+                            <p>Tempat Penjemputan: <span id="hasil-tgl"></span></p>
+                            <p>Kebutuhan: <span id="hasil-kebutuhan"></span></p>
+                            <p>Keterangan: <span id="hasil-keterangan"></span></p>
+                            <p>Nomor: <span id="hasil-nomor"></span></p>
+                            
                         </div>
                     </section>
             </section>
@@ -138,10 +155,15 @@
 
     </section>
 
+
+
     <footer>
         <hr color="blueviolet">
 <h6 align="center">Created By: Bayu Harmono Putra</h6>
 
     </footer>
+    <script src="js/script.js"></script>
+        
+
 </body>
 </html>
