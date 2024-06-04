@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bayu Harmono Putra Portofolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
         <body {
             margin: 0;
@@ -78,84 +79,70 @@
                 <h1 align="center">Hubungi Kami Disini</h1>
             </header>
             <section class="message-us-section">
-                    <!-- Form -->
-                    <section class="section-form">
-                        <form name="datapribadi" method="" action="">
+                <!-- Form -->
+                <section class="section-form">
+                    <form name="datapribadi" onsubmit="return displayResult()">
                         <table>
-                        <tr>
-                            <td>Nama</td>
-                            <td>:</td>
-                            <td><input type="text" placeholder="Nama" id="full-name"  required> <br /></td>
-                        </tr>       
-                    
-                        <tr>
-                            <td>Tempat/Tanggal Penjemputan</td>
-                            <td>:</td>
-                            <td><input type="text" name="tempatLahir" placeholder="Tempat" id="birt-date"> <input type="date" name="tanggal" id="tanggal" /></td>
-                        </tr>
-                    
-                        <tr>
-                            <td>Kebutuhan</td>
-                            <td>:</td>
-                            <td><select name="kebutuhan" id="kebutuhan">
-                                <option value="Servis"> Servis </option>
-                                <option value="Beli Barang"> Beli Barang </option>
-                                <option value="Jual Barang"> Jual Barang </option>
-                                <option value="Delivery Service"> Delivery Services </option>
-                                <option value="Servis Di Tempat"> Servis Di Tempat </option>
-                            </select></td>
-                        </tr>
-                    
-                        <tr>
-                            <td>Apa Yang Anda Butuhkan</td>
-                            <td>:</td>
-                            <td><textarea name="komentar" rows="4" cols="50" placeholder="Tulis Disini Kebutuhan Anda" id="Keterangan"></textarea> </td>
-                        </tr>
-                    
-                        <tr>
-                            <td>No Telp/Hp</td>
-                            <td>:</td>
-                            <td><input type="number" id="nomor" name="number" placeholder="Nomor Telepon"/></td>
-                        </tr>
-                    
-                        <tr>
-                            <td>Jenis Kelamin</td>
-                            <td>:</td>
-                            <td> 
-                                <input type="radio" name="jeniskelamin" value="Pria">Pria
-                                <input type="radio" name="jeniskelamin" value="Wanita">Wanita
-                                
-                            </td>
-                        </tr>                             
-                    </table>
-                    <button type="button" onclick="cetak()"  value="KIRIM" style="height: 40px; width: 580px;"> Kirim </button>
-                </form>
-                        
-                    </section>
-
-                    <!-- Result -->
-                    <section class="result-container">
-                    
-                        <div class="form-result">
-
-                            <p><h1>KAMI AKAN SEGERA MERESPON KEBUTUHAN ANDA</h1>  </p>
-                            <P></P>
-                            <P></P>
-
-                            <p>Nama: <span id="hasil-nama"></span></p>
-                            <p>Lokasi Penjemputan: <span id="hasil-ttl"></span></p>
-                            <p>Tempat Penjemputan: <span id="hasil-tgl"></span></p>
-                            <p>Kebutuhan: <span id="hasil-kebutuhan"></span></p>
-                            <p>Keterangan: <span id="hasil-keterangan"></span></p>
-                            <p>Nomor: <span id="hasil-nomor"></span></p>
-                            
-                        </div>
-                    </section>
+                            <tr>
+                                <td>Nama</td>
+                                <td>:</td>
+                                <td><input type="text" placeholder="Nama" id="full-name" name="nama" required> <br /></td>
+                            </tr>       
+                            <tr>
+                                <td>Tempat/Tanggal Penjemputan</td>
+                                <td>:</td>
+                                <td><input type="text" name="tempatLahir" placeholder="Tempat" id="birt-date"> <input type="date" name="tanggal" id="tanggal" /></td>
+                            </tr>
+                            <tr>
+                                <td>Kebutuhan</td>
+                                <td>:</td>
+                                <td>
+                                    <select name="kebutuhan" id="kebutuhan">
+                                        <option value="Servis">Servis</option>
+                                        <option value="Beli Barang">Beli Barang</option>
+                                        <option value="Jual Barang">Jual Barang</option>
+                                        <option value="Delivery Service">Delivery Services</option>
+                                        <option value="Servis Di Tempat">Servis Di Tempat</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Apa Yang Anda Butuhkan</td>
+                                <td>:</td>
+                                <td><textarea name="komentar" rows="4" cols="50" placeholder="Tulis Disini Kebutuhan Anda" id="Keterangan"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>No Telp/Hp</td>
+                                <td>:</td>
+                                <td><input type="number" id="nomor" name="number" placeholder="Nomor Telepon"/></td>
+                            </tr>
+                            <tr>
+                                <td>Jenis Kelamin</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="radio" name="jeniskelamin" value="Pria">Pria
+                                    <input type="radio" name="jeniskelamin" value="Wanita">Wanita
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="KIRIM" style="height: 40px; width: 580px;">
+                    </form>
+                </section>
+                <!-- Result -->
+                <section class="result-container">
+                    <div class="form-result">
+                        <h1>KAMI AKAN SEGERA MERESPON KEBUTUHAN ANDA</h1>
+                        <p>Nama: <span id="hasil-nama"></span></p>
+                        <p>Lokasi Penjemputan: <span id="hasil-ttl"></span></p>
+                        <p>Tanggal Penjemputan: <span id="hasil-tgl"></span></p>
+                        <p>Kebutuhan: <span id="hasil-kebutuhan"></span></p>
+                        <p>Keterangan: <span id="hasil-keterangan"></span></p>
+                        <p>Nomor: <span id="hasil-nomor"></span></p>
+                        <p>Jenis Kelamin: <span id="hasil-jenis-kelamin"></span></p>
+                    </div>
+                </section>
             </section>
         </section>
-
-    </section>
-
 
 
     <footer>
