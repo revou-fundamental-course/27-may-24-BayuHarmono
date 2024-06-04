@@ -1,4 +1,6 @@
-alert('Halo Selamat Datang di Website Airlangga Digital')
+let Namamu = prompt("Selamat Datang, Silahkan Isi Nama Anda");
+document.getElementById("PENDATANG").innerHTML = Namamu
+
 
 function cetak() {
     var a = document.getElementById("full-name").value ; 
