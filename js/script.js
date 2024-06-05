@@ -26,3 +26,29 @@ function setSenderform(hasilNama, hasilTtl, hasilTgl, hasilKebutuhan, hasilPesan
     document.getElementById("hasil-nomor").innerHTML = hasilNomor;
     document.getElementById("hasil-jenis-kelamin").innerHTML = hasilJkel;
 }
+
+
+
+let indexSlide = 1;
+showBanner(1);
+
+
+function nextSlide(n) {
+    showBanner(indexSlide += n);
+}
+
+function showBanner(indexBanner) {
+    let listImage = document.getElementsByClassName('hero-img');  
+    if (indexBanner > listImage.length) indexSlide = 1;
+
+    let index = 0;
+    while (index < listImage.length) {
+        listImage[index].style.display = 'none';
+        index++;
+    }
+
+    listImage[indexSlide - 1].style.display = 'block' ;
+
+}   
+
+    setInterval(() => nextSlide(1), 3000) ;
