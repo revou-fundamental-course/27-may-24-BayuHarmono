@@ -12,7 +12,6 @@ body{
 }
 
 nav{
-    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,14 +19,12 @@ nav{
 
 ul{
     display: flex;
+    flex-direction: row;
     list-style-type: none;
-    position: relative;
-    margin: 270px;
-    width: auto;
-    height: auto;
     background: #34495e;
     border-radius: 8px;
     align-items: center;
+    z-index: 10;
 }
     
 
@@ -76,6 +73,7 @@ li a:hover::after{
     min-height: 100vh;
     height: auto;
     border: 1px solid black;
+    align-items: center;
 }
 
 .facility-list {
@@ -108,12 +106,6 @@ border: 3px solid blueviolet;
 .hero-img {
     width: 100%;
     height: 80%;
-    display: none;
-}
-
-.utama {
-    width: 100%;
-    height: 80%;
 }
 
 hr{
@@ -132,6 +124,4 @@ hr{
     .respon {
         flex-direction: column;
     }
-   
-  
 }
