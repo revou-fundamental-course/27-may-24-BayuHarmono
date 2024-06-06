@@ -134,3 +134,22 @@ hr{
     flex-direction: column;
     }
 }
+
+#preloader {
+    background: #000 url(../pl.gif) no-repeat center center;
+    background-size: 50%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#if {
+    display: none;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

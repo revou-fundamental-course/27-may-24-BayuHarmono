@@ -16,6 +16,10 @@
     </script>
 </head>
 <body >
+
+
+    <div id="preloader"></div>
+
     <section style="background-image: url('ww.jpg');" >
         <nav class="respon">
             <img src="logo.png" alt="logo" width="90px">
@@ -121,7 +125,7 @@
                                 <td>
                                     <input type="radio" name="jeniskelamin" value="Pria">Pria
                                     <input type="radio" name="jeniskelamin" value="Wanita">Wanita
-                                    <input type="submit" value="KIRIM" style="height: 70%; width: 30%;">
+                                    <input type="submit" value="KIRIM" style="height: 70%; width: 30%; background-color: red; color: aliceblue;">
                                 </td>
                                 <td>
                                     
@@ -153,7 +157,25 @@
 
     </footer>
     <script src="js/script.js"></script>
-        
+     
+
+
+    <!-- Animasi Loader -->
+     <div id="if">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJg-Y5byMMw?si=rzHm9tQloBchNzkV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJg-Y5byMMw?si=rzHm9tQloBchNzkV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJg-Y5byMMw?si=rzHm9tQloBchNzkV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yJg-Y5byMMw?si=rzHm9tQloBchNzkV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <script>
+
+var loader = document.getElementById("preloader") ;
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+
+})
+
+    </script>
 
 </body>
 </html>
